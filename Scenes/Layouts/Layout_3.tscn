@@ -163,6 +163,37 @@ rotation = -0.036344506
 position = Vector2(323.70374, -2885.185)
 rotation = -0.036344506
 
+[node name="BottleSpawnPoints" type="Node2D" parent="FrontLayer"]
+z_index = 6
+
+[node name="Node2D" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(-857.7778, -2857.7776)
+rotation = -0.081282035
+
+[node name="Node2D2" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(-577.7777, -2885.9258)
+rotation = -0.044426862
+
+[node name="Node2D3" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(170.3704, -2908.1482)
+rotation = -0.09194657
+
+[node name="Node2D4" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(1158.5184, -3186.6667)
+rotation = 0.018255465
+
+[node name="Node2D5" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(1495.5554, -3158.5186)
+rotation = 0.017463353
+
+[node name="Node2D6" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(1392.5924, -3170.37)
+rotation = 0.017463353
+
+[node name="Node2D7" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(2197.037, -3100)
+rotation = 0.07962326
+
 [node name="BuildingRects" type="Node2D" parent="FrontLayer"]
 
 [node name="ColorRect" type="ColorRect" parent="FrontLayer/BuildingRects"]
@@ -987,18 +1018,55 @@ position = Vector2(-310.90906, -5580)
 [node name="Node2D48" type="Node2D" parent="BackLayer/SpawnPoint"]
 position = Vector2(1539.091, -5513.636)
 
+[node name="BottleSpawnPoints" type="Node2D" parent="BackLayer"]
+z_index = 6
+
+[node name="Node2D" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-160.90903, -5599.0903)
+rotation = 0.12312306
+
+[node name="Node2D2" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-393.6364, -5603.6367)
+rotation = 0.028555758
+
+[node name="Node2D3" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-642.7273, -5604.545)
+rotation = -0.077161744
+
+[node name="Node2D4" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-1029.091, -5583.636)
+
+[node name="Node2D5" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-1388.1818, -5583.636)
+rotation = -0.04857848
+
+[node name="Node2D6" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(1105.4547, -5563.6367)
+rotation = 0.07434538
+
+[node name="Node2D7" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(876.36365, -5556.364)
+
+[node name="Node2D8" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(1626.3635, -5541.818)
+rotation = -0.09336032
+
+[node name="Node2D9" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(2101.818, -5510.9087)
+rotation = 0.0017308965
+
 [node name="BuildingRects" type="Node2D" parent="BackLayer"]
 position = Vector2(-1340.909, 90.90909)
 
-[node name="ColorRect2" type="ColorRect" parent="BackLayer"]
-offset_left = -1502.7273
-offset_top = -5557.272
-offset_right = 40.908936
-offset_bottom = -1032.7266
+[node name="ColorRect2" type="ColorRect" parent="BackLayer/BuildingRects"]
+offset_left = -161.81812
+offset_top = -5648.181
+offset_right = 1381.8181
+offset_bottom = -1123.6357
 rotation = -0.015692806
 color = Color(0.30093327, 0.11100001, 0.37, 1)
 
-[node name="TexWindow" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.28235295, 0.8509804, 0.43529412, 1)
 z_index = 3
 position = Vector2(207.27252, 268.18167)
@@ -1006,13 +1074,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow2" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow2" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(568.18164, 268.18167)
@@ -1020,13 +1088,13 @@ rotation = -3.1991227
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow2"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow2"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow3" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow3" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(941.818, 274.54532)
@@ -1034,13 +1102,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow3"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow3"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow4" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow4" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.28235295, 0.8509804, 0.43529412, 1)
 z_index = 3
 position = Vector2(1311.818, 268.18167)
@@ -1048,13 +1116,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow4"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow4"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow5" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow5" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(215.63867, 791.8899)
@@ -1062,13 +1130,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow5"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow5"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow6" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow6" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(576.5478, 791.8899)
@@ -1076,13 +1144,13 @@ rotation = -3.1991227
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow6"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow6"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow20" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow20" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(1275.9575, 1773.877)
@@ -1090,13 +1158,13 @@ rotation = -3.0732377
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow20"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow20"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow7" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow7" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(950.18414, 798.25354)
@@ -1104,13 +1172,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow7"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow7"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow8" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow8" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(1320.1841, 791.8899)
@@ -1118,13 +1186,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow8"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow8"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow9" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow9" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.28235295, 0.8509804, 0.43529412, 1)
 z_index = 3
 position = Vector2(219.27504, 1285.5262)
@@ -1132,13 +1200,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow9"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow9"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow19" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow19" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.28235295, 0.8509804, 0.43529412, 1)
 z_index = 3
 position = Vector2(940.1733, 1792.2463)
@@ -1146,13 +1214,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow19"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow19"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow10" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow10" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(580.18414, 1285.5262)
@@ -1160,13 +1228,13 @@ rotation = -3.1991227
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow10"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow10"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow13" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow13" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(207.45708, 1823.7085)
@@ -1174,13 +1242,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow13"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow13"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow14" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow14" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(568.3662, 1823.7085)
@@ -1188,13 +1256,13 @@ rotation = -3.1991227
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow14"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow14"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow11" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow11" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(953.8205, 1291.8899)
@@ -1202,13 +1270,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow11"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow11"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow12" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexWindow12" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(1323.8204, 1285.5262)
@@ -1216,108 +1284,108 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect2/TexWindow12"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2/TexWindow12"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexBuildingWallDecoA" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(1520.8535, 1405.8572)
 rotation = 1.5707964
 texture = ExtResource("2_50h04")
 
-[node name="TexBuildingWallDecoA2" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA2" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(32.112015, 213.25793)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 
-[node name="TexBuildingWallDecoA3" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA3" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(23.713753, 2949.8267)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA7" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA7" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(1535.7815, 570.53394)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA10" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA10" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(31.09082, 2248.0376)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA8" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA8" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(28.1875, 1100.5781)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA9" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA9" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(18.527534, 1542.2991)
 rotation = 1.5707964
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA4" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA4" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(17.079697, 707.62836)
 rotation = 4.712389
 texture = ExtResource("3_48745")
 flip_h = true
 
-[node name="TexBuildingWallDecoA5" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA5" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(1522.1188, 977.6426)
 rotation = 4.712389
 texture = ExtResource("3_48745")
 flip_h = true
 
-[node name="TexBuildingWallDecoA15" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA15" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(1521.8445, 1864.1101)
 rotation = 4.712389
 texture = ExtResource("3_48745")
 flip_h = true
 
-[node name="TexBuildingWallDecoA11" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA11" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(-1.2087402, 1872.9395)
 rotation = 4.712389
 texture = ExtResource("3_48745")
 flip_h = true
 
-[node name="TexBuildingWallDecoA6" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA6" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(1527.4292, 175.80902)
 rotation = 4.712389
 texture = ExtResource("3_48745")
 flip_h = true
 
-[node name="TexBuildingWallDecoA12" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA12" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 z_index = 9
 position = Vector2(302.5901, 11.113823)
 rotation = 3.1415927
 texture = ExtResource("2_50h04")
 
-[node name="TexBuildingWallDecoA13" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA13" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 z_index = 9
 position = Vector2(769.59125, 32.081024)
 texture = ExtResource("2_50h04")
 
-[node name="TexBuildingWallDecoA14" type="Sprite2D" parent="BackLayer/ColorRect2"]
+[node name="TexBuildingWallDecoA14" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect2"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 z_index = 9
 position = Vector2(1295.2808, 21.237984)
@@ -1326,15 +1394,15 @@ texture = ExtResource("2_50h04")
 flip_h = true
 flip_v = true
 
-[node name="ColorRect3" type="ColorRect" parent="BackLayer"]
-offset_left = 770.0
-offset_top = -5537.273
-offset_right = 2313.6362
-offset_bottom = -1012.72754
+[node name="ColorRect3" type="ColorRect" parent="BackLayer/BuildingRects"]
+offset_left = 2110.9092
+offset_top = -5628.182
+offset_right = 3654.5454
+offset_bottom = -1103.6367
 rotation = 0.0381656
 color = Color(0.30093327, 0.11100001, 0.37, 1)
 
-[node name="TexWindow" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.28235295, 0.8509804, 0.43529412, 1)
 z_index = 3
 position = Vector2(207.27252, 268.18167)
@@ -1342,13 +1410,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow2" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow2" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(568.18164, 268.18167)
@@ -1356,13 +1424,13 @@ rotation = -3.1991227
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow2"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow2"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow3" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow3" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(941.818, 274.54532)
@@ -1370,13 +1438,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow3"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow3"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow4" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow4" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.28235295, 0.8509804, 0.43529412, 1)
 z_index = 3
 position = Vector2(1311.818, 268.18167)
@@ -1384,13 +1452,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow4"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow4"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow5" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow5" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(215.63867, 791.8899)
@@ -1398,13 +1466,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow5"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow5"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow6" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow6" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(576.5478, 791.8899)
@@ -1412,13 +1480,13 @@ rotation = -3.1991227
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow6"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow6"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow7" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow7" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(950.18414, 798.25354)
@@ -1426,13 +1494,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow7"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow7"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow8" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow8" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(1320.1841, 791.8899)
@@ -1440,13 +1508,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow8"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow8"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow9" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow9" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.28235295, 0.8509804, 0.43529412, 1)
 z_index = 3
 position = Vector2(219.27504, 1285.5262)
@@ -1454,13 +1522,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow9"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow9"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow10" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow10" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(580.18414, 1285.5262)
@@ -1468,13 +1536,13 @@ rotation = -3.1991227
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow10"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow10"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow13" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow13" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(207.45708, 1823.7085)
@@ -1482,13 +1550,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow13"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow13"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow15" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow15" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(199.27525, 2353.7085)
@@ -1496,13 +1564,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow15"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow15"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow17" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow17" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.28235295, 0.8509804, 0.43529412, 1)
 z_index = 3
 position = Vector2(204.54547, 2864.5454)
@@ -1510,13 +1578,13 @@ rotation = -3.1038291
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow17"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow17"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow11" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow11" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.46666667, 0.8509804, 0.34901962, 1)
 z_index = 3
 position = Vector2(953.8205, 1291.8899)
@@ -1524,13 +1592,13 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow11"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow11"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexWindow12" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexWindow12" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.12941177, 0.8745098, 0, 1)
 z_index = 3
 position = Vector2(1323.8204, 1285.5262)
@@ -1538,32 +1606,32 @@ rotation = -3.1339498
 scale = Vector2(0.45, 0.45)
 texture = ExtResource("1_vb5ey")
 
-[node name="Bg" type="Sprite2D" parent="BackLayer/ColorRect3/TexWindow12"]
+[node name="Bg" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3/TexWindow12"]
 modulate = Color(0.85, 0.85, 0.85, 0.42745098)
 z_index = -2
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("1_vb5ey")
 
-[node name="TexBuildingWallDecoA" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(1520.8535, 1405.8572)
 rotation = 1.5707964
 texture = ExtResource("2_50h04")
 
-[node name="TexBuildingWallDecoA2" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA2" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(32.112015, 213.25793)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 
-[node name="TexBuildingWallDecoA3" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA3" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(23.713753, 2949.8267)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA16" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA16" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(-63.39419, 3962.5771)
 rotation = 4.712389
@@ -1571,7 +1639,7 @@ scale = Vector2(2.0507548, 4.300142)
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA17" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA17" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(-123.26145, 3895.7224)
 rotation = 4.733575
@@ -1579,83 +1647,83 @@ scale = Vector2(2.0507548, 4.300142)
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA15" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA15" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(-5.7415333, 3447.275)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA7" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA7" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(1535.7815, 570.53394)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA10" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA10" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(31.09082, 2248.0376)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA8" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA8" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(28.1875, 1100.5781)
 rotation = 4.712389
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA9" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA9" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(18.527534, 1542.2991)
 rotation = 1.5707964
 texture = ExtResource("2_50h04")
 flip_h = true
 
-[node name="TexBuildingWallDecoA4" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA4" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(17.079697, 707.62836)
 rotation = 4.712389
 texture = ExtResource("3_48745")
 flip_h = true
 
-[node name="TexBuildingWallDecoA5" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA5" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(1522.1188, 977.6426)
 rotation = 4.712389
 texture = ExtResource("3_48745")
 flip_h = true
 
-[node name="TexBuildingWallDecoA11" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA11" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(-1.2087402, 1872.9395)
 rotation = 4.712389
 texture = ExtResource("3_48745")
 flip_h = true
 
-[node name="TexBuildingWallDecoA6" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA6" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(1527.4292, 175.80902)
 rotation = 4.712389
 texture = ExtResource("3_48745")
 flip_h = true
 
-[node name="TexBuildingWallDecoA12" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA12" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 z_index = 9
 position = Vector2(302.5901, 11.113823)
 rotation = 3.1415927
 texture = ExtResource("2_50h04")
 
-[node name="TexBuildingWallDecoA13" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA13" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 z_index = 9
 position = Vector2(769.59125, 32.081024)
 texture = ExtResource("2_50h04")
 
-[node name="TexBuildingWallDecoA14" type="Sprite2D" parent="BackLayer/ColorRect3"]
+[node name="TexBuildingWallDecoA14" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect3"]
 modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 z_index = 9
 position = Vector2(1295.2808, 21.237984)
@@ -1663,6 +1731,26 @@ rotation = 0.09757143
 texture = ExtResource("2_50h04")
 flip_h = true
 flip_v = true
+
+[node name="MoonSpawnPoints" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(-2808, -7051)
+
+[node name="Node2D2" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(-3759, -9016)
+
+[node name="Node2D4" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(1857, -7510)
+
+[node name="Node2D5" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(4503, -6032)
+
+[node name="Node2D6" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(331, -8225)
+
+[node name="Node2D7" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(2937, -8900)
 
 [node name="BackgroundLayer" type="Node2D" parent="."]
 modulate = Color(0.1254902, 0.3137255, 0.16862746, 1)

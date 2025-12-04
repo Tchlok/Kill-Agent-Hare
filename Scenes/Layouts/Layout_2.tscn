@@ -175,6 +175,45 @@ rotation = -0.07304482
 position = Vector2(2792.5928, -1366.6667)
 rotation = -0.08712849
 
+[node name="BottleSpawnPoints" type="Node2D" parent="FrontLayer"]
+z_index = 6
+
+[node name="Node2D" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(1425.9259, -3313.3333)
+rotation = -0.10954599
+
+[node name="Node2D2" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(1645.1852, -3342.2217)
+rotation = -0.024170816
+
+[node name="Node2D3" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(2092.5925, -3376.2961)
+rotation = -0.024170816
+
+[node name="Node2D4" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(2714.0737, -3424.4443)
+rotation = -0.024170816
+
+[node name="Node2D5" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(417.0371, -2466.666)
+rotation = -0.024170816
+
+[node name="Node2D6" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(1066.6667, -2458.5186)
+rotation = 0.027139936
+
+[node name="Node2D7" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(-1854.8148, -2859.9998)
+rotation = 0.03561596
+
+[node name="Node2D8" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(-1440.7407, -2876.2961)
+rotation = -0.041843407
+
+[node name="Node2D9" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(-796.29614, -2877.7778)
+rotation = 0.033857062
+
 [node name="BuildingRects" type="Node2D" parent="FrontLayer"]
 
 [node name="ColorRect" type="ColorRect" parent="FrontLayer/BuildingRects"]
@@ -1078,6 +1117,29 @@ rotation = -0.031657264
 position = Vector2(-377.2726, -4570.909)
 rotation = -0.031657264
 
+[node name="BottleSpawnPoints" type="Node2D" parent="BackLayer"]
+z_index = 6
+
+[node name="Node2D" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-1636.3636, -4574.5454)
+rotation = -0.086131096
+
+[node name="Node2D2" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-1168.1819, -4575.4546)
+rotation = -0.025534913
+
+[node name="Node2D3" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-793.6363, -4570.909)
+rotation = -0.025534913
+
+[node name="Node2D4" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(213.63638, -4615.4546)
+rotation = -0.025534913
+
+[node name="Node2D5" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(976.36346, -4616.3633)
+rotation = -0.025534913
+
 [node name="BuildingRects" type="Node2D" parent="BackLayer"]
 position = Vector2(-1340.909, 90.90909)
 
@@ -1730,6 +1792,26 @@ rotation = 0.016685486
 texture = ExtResource("3_clka3")
 flip_h = true
 flip_v = true
+
+[node name="MoonSpawnPoints" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(-2808, -7051)
+
+[node name="Node2D2" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(-3759, -9016)
+
+[node name="Node2D4" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(1857, -7510)
+
+[node name="Node2D5" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(4503, -6032)
+
+[node name="Node2D6" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(331, -8225)
+
+[node name="Node2D7" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(2937, -8900)
 
 [node name="BackgroundLayer" type="Node2D" parent="."]
 modulate = Color(0.1254902, 0.3137255, 0.16862746, 1)

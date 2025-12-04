@@ -131,6 +131,25 @@ rotation = 0.13895108
 position = Vector2(1474.8147, -1139.2593)
 rotation = -0.023998378
 
+[node name="BottleSpawnPoints" type="Node2D" parent="FrontLayer"]
+z_index = 6
+
+[node name="Node2D" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(2744.4443, -2171.8518)
+rotation = 0.012976768
+
+[node name="Node2D2" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(2115.5554, -2207.4075)
+rotation = 0.08212384
+
+[node name="Node2D3" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(426.66663, -3130.3704)
+rotation = 0.037224114
+
+[node name="Node2D4" type="Node2D" parent="FrontLayer/BottleSpawnPoints"]
+position = Vector2(-909.6295, -3148.8884)
+rotation = 0.037224114
+
 [node name="BuildingRects" type="Node2D" parent="FrontLayer"]
 
 [node name="ColorRect" type="ColorRect" parent="FrontLayer/BuildingRects"]
@@ -331,7 +350,15 @@ texture = ExtResource("2_1rfoc")
 [node name="TexBuildingWallDecoA11" type="Sprite2D" parent="FrontLayer/BuildingRects/ColorRect/Windows"]
 modulate = Color(0.49019608, 0.1882353, 0.54901963, 1)
 z_index = 9
-position = Vector2(688.59766, -5306.0293)
+position = Vector2(706.17725, -5309.409)
+rotation = -3.1415927
+scale = Vector2(1.0703183, 1.0337964)
+texture = ExtResource("2_1rfoc")
+
+[node name="TexBuildingWallDecoA12" type="Sprite2D" parent="FrontLayer/BuildingRects/ColorRect/Windows"]
+modulate = Color(0.49019608, 0.1882353, 0.54901963, 1)
+z_index = 9
+position = Vector2(-246.38255, -5273.089)
 rotation = -3.1415927
 texture = ExtResource("2_1rfoc")
 
@@ -587,7 +614,7 @@ texture = ExtResource("2_1rfoc")
 modulate = Color(0.49019608, 0.1882353, 0.54901963, 1)
 z_index = 9
 position = Vector2(1204.6299, 10.000403)
-rotation = -3.1415927
+rotation = -3.230983
 texture = ExtResource("2_1rfoc")
 
 [node name="TexBuildingWallDecoA13" type="Sprite2D" parent="FrontLayer/BuildingRects/ColorRect3"]
@@ -790,6 +817,45 @@ rotation = -0.0029990338
 position = Vector2(1456.3635, -4299.09)
 rotation = -0.0020398758
 
+[node name="BottleSpawnPoints" type="Node2D" parent="BackLayer"]
+z_index = 6
+
+[node name="Node2D" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-2031.8181, -3039.091)
+rotation = -0.12785074
+
+[node name="Node2D2" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-2921.818, -2973.6362)
+rotation = 0.0012889653
+
+[node name="Node2D3" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-342.7273, -4418.182)
+rotation = 0.0012889653
+
+[node name="Node2D4" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-578.1818, -4443.636)
+rotation = 0.0012889653
+
+[node name="Node2D5" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(-1592.7274, -4471.818)
+rotation = 0.0012889653
+
+[node name="Node2D6" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(912.7273, -4305.454)
+rotation = -0.034775574
+
+[node name="Node2D7" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(1195.4545, -4331.8184)
+rotation = 0.01290239
+
+[node name="Node2D8" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(1350.909, -4318.1816)
+rotation = 0.01290239
+
+[node name="Node2D9" type="Node2D" parent="BackLayer/BottleSpawnPoints"]
+position = Vector2(2407.273, -4344.545)
+rotation = 0.01290239
+
 [node name="BuildingRects" type="Node2D" parent="BackLayer"]
 position = Vector2(-1340.909, 90.90909)
 
@@ -932,6 +998,14 @@ modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 z_index = 9
 position = Vector2(1013.34735, 0.8883097)
 rotation = -3.1415927
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_1rfoc")
+
+[node name="TexBuildingWallDecoA13" type="Sprite2D" parent="BackLayer/BuildingRects/ColorRect"]
+modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
+z_index = 9
+position = Vector2(1084.6398, 37.568653)
+rotation = -3.269865
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("2_1rfoc")
 
@@ -1549,6 +1623,26 @@ modulate = Color(0.3019608, 0.10980392, 0.36862746, 1)
 position = Vector2(7.921114, 633.6031)
 rotation = 1.5707964
 texture = ExtResource("3_s5442")
+
+[node name="MoonSpawnPoints" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(-2808, -7051)
+
+[node name="Node2D2" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(-3759, -9016)
+
+[node name="Node2D4" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(1857, -7510)
+
+[node name="Node2D5" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(4503, -6032)
+
+[node name="Node2D6" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(331, -8225)
+
+[node name="Node2D7" type="Node2D" parent="MoonSpawnPoints"]
+position = Vector2(2937, -8900)
 
 [node name="BackgroundLayer" type="Node2D" parent="."]
 modulate = Color(0.1254902, 0.3137255, 0.16862746, 1)

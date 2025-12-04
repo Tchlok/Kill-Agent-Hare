@@ -5,6 +5,10 @@ extends Node2D
 @export var spawnPointUsageRatio : float
 @export var mainTargetPacked : PackedScene
 @export var civTargets : Array[PackedScene]
+@export var bottleSpawnCount : int = 2
+@export var bottleTarget : PackedScene
+@export var moonTarget : PackedScene
+
 
 var spawnPoints : Array[Node2D]
 var curLayout : Node2D
@@ -41,6 +45,26 @@ func spawn():
 	for i in usedSpawnPointsCount:
 		_spawnTarget(civTargets.pick_random(),spawnPoints.pick_random(),true)
 	
+	var bottleSpawnPoints : Array[Node2D]
+	for sp in layout.get_child(0).get_child(1).get_children():
+		bottleSpawnPoints.append(sp)
+	for sp in layout.get_child(1).get_child(1).get_children():
+		bottleSpawnPoints.append(sp)
+
+	for i in bottleSpawnCount:
+		var p : Node2D = bottleSpawnPoints.pick_random()
+		bottleSpawnPoints.erase(p)
+		var bottle : Node2D = bottleTarget.instantiate()
+		if randf()>0.5:
+			bottle.scale*=Vector2(-1,1)
+		p.add_child(bottle)
+
+
+	var moon : Node2D = moonTarget.instantiate()
+	if randf()>0.5:
+		moon.scale*=Vector2(-1,1)
+	layout.get_child(2).get_children().pick_random().add_child(moon)
+
 	return mainTar
 
 func _spawnTarget(packed : PackedScene, point : Node2D , remove : bool):
