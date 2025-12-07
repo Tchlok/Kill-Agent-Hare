@@ -1,8 +1,9 @@
 class_name Spawn
 extends Node2D
 
+@export var endings : Endings
+
 @export var layouts : Array[PackedScene]
-@export var spawnPointUsageRatio : float
 @export var mainTargetPacked : PackedScene
 @export var civTargets : Array[PackedScene]
 @export var bottleSpawnCount : int = 2
@@ -13,7 +14,7 @@ extends Node2D
 var spawnPoints : Array[Node2D]
 var curLayout : Node2D
 
-func spawn():
+func spawn(usageRatio : float):
 	if curLayout!=null:
 		curLayout.queue_free()
 		curLayout=null
@@ -39,7 +40,7 @@ func spawn():
 
 	
 
-	var usedSpawnPointsCount : int = spawnPoints.size()*spawnPointUsageRatio
+	var usedSpawnPointsCount : int = spawnPoints.size()*usageRatio
 	print(str(spawnPoints.size())+"   "+str(usedSpawnPointsCount))
 
 	for i in usedSpawnPointsCount:
@@ -65,7 +66,7 @@ func spawn():
 		moon.scale*=Vector2(-1,1)
 	layout.get_child(2).get_children().pick_random().add_child(moon)
 
-	return mainTar
+	endings.mainTarget=mainTar
 
 func _spawnTarget(packed : PackedScene, point : Node2D , remove : bool):
 	var tar : Target = packed.instantiate()

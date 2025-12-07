@@ -9,13 +9,23 @@ var gameState : GameState
 
 @export var crosshairSpring : Node2D
 @export var crosshairShake : Node2D
+@export var crosshairVisuals : Node2D
 @export var crosshairAnim : AnimationPlayer
 @export var crosshairRotate : Node2D
 @export var crosshairRotMod : float = 8
 
+@export var crosshairOverlay : Node2D
+@export var counterLabel : RichTextLabel
+
+
 @export var startPosition : Vector2
 @export var colors : Array[Color]
 @export var colorRect : ColorRect
+
+@export var difficultyLabel : RichTextLabel
+@export var difficultyRatios : Array[float]
+@export var difficultyShaker : Shaker
+var difficultyIndex : int
 
 @export var gameBoundsX : float
 @export var gameBoundsTop : float
@@ -56,6 +66,8 @@ var swayIntensity : float
 var moveAxis : Vector2
 func _enter_tree():
 	camera.position=startPosition
+	difficultyIndex=1
+	updateDifficulty(0)
 
 func _ready():
 	endings.visible=false
@@ -77,11 +89,17 @@ func _process(delta):
 	crosshairRotate.rotation_degrees=(crossVelocity.x/gameMaxMoveSpeed)*crosshairRotMod
 	match gameState:
 		GameState.Start:
+			if Input.is_action_just_pressed("MoveRight") or Input.is_action_just_pressed("MoveUp"):
+				updateDifficulty(1)
+			if Input.is_action_just_pressed("MoveLeft") or Input.is_action_just_pressed("MoveDown"):
+				updateDifficulty(-1)
+
 			if Input.is_action_just_pressed("Shoot"):
 				_newState(GameState.ZoomUp)
+				SoundSpawner.SpawnFromName("Woosh")
 				crosshairAnim.play("CrosshairOn")
-				crosshairSpring.visible=true
-				spawn.spawn()
+				counterLabel.text="20:00"
+				spawn.spawn(difficultyRatios[difficultyIndex])
 		GameState.ZoomUp:
 			camera.position = startPosition.lerp(zoomUpPosition, zoomUpCurve.sample(MathS.Clamp01(_t/zoomUpDuration)))
 			crosshairSpring.position=camera.position
@@ -90,6 +108,25 @@ func _process(delta):
 		GameState.Game:
 			if Input.is_action_just_pressed("Shoot"):
 				shoot()
+			
+
+
+			var remainingT = 20-_t
+			var counterText : String = ""
+			var secondsInt : int = maxi(floori(remainingT),0)
+			if secondsInt < 10:
+				counterText+="0"+str(secondsInt)
+			else:
+				counterText+=str(secondsInt)
+			counterText+=":"
+
+			var rest : int = maxi(floori((remainingT-secondsInt)*100),0)
+			if rest < 10:
+				counterText+="0"+str(rest)
+			else:
+				counterText+=str(rest)
+			counterLabel.text=counterText
+
 			if _t>=20:
 				_newState(GameState.Expired)
 				colorRect.color=expiredColor
@@ -103,7 +140,7 @@ func _process(delta):
 			colorRect.color.a = expiredCurve.sample(MathS.Clamp01(_t/expiredDuration))
 			if aOld!=1 and colorRect.color.a==1:
 				endings.loadEndingVisuals()
-				crosshairSpring.visible=false
+				crosshairVisuals.visible=false
 	
 			if _t>=expiredDuration:
 				_newState(GameState.Ended)
@@ -124,6 +161,11 @@ func _process(delta):
 			if _t>=restartDuration:
 				_newState(GameState.Start)
 	_t+=delta
+
+	crosshairOverlay.position=camera.position.lerp(crosshairSpring.position,0.25)
+	crosshairOverlay.scale=crosshairVisuals.scale
+	crosshairOverlay.visible=crosshairVisuals.visible
+
 func _physics_process(delta):
 	match gameState:
 		GameState.Start:
@@ -159,12 +201,31 @@ func _physics_process(delta):
 			pass
 	_tPhys+=delta
 
-	if gameState==GameState.Game or gameState==GameState.ZoomUp:
+	if gameState==GameState.Game or gameState==GameState.ZoomUp or gameState==GameState.Expired:
 		var crossRigid : float = gameBaseRigid
 		var crossDamp : float = gameBaseDamp
 		var crossToCam : Vector2 = crosshairSpring.position-camera.position
 		crossVelocity+= -crossRigid*crossToCam-(crossDamp*crossVelocity)
 
+
+func updateDifficulty(offset : int):
+	difficultyIndex+=offset
+	if difficultyIndex<0:
+		difficultyIndex=2
+	elif difficultyIndex > 2:
+		difficultyIndex=0
+	
+	if offset!=0:
+		difficultyShaker.Trigger(20)
+		SoundSpawner.SpawnFromName("Thump",0.1)
+	difficultyLabel.text="[center]DIFFICULTY: "
+	match difficultyIndex:
+		0:
+			difficultyLabel.text+="EASY"
+		1:
+			difficultyLabel.text+="NORMAL"
+		2:
+			difficultyLabel.text+="HARD"
 
 
 var crossVelocity : Vector2
@@ -197,4 +258,5 @@ func shoot():
 	colorRect.color=gunFlashColor
 	colorRect.color.a=1
 	endings.loadEndingVisuals()
-	crosshairSpring.visible=false
+	crosshairVisuals.visible=false
+	SoundSpawner.SpawnFromName("Shot")

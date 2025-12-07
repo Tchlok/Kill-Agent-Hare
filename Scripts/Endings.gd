@@ -39,7 +39,7 @@ func loadEndingVisuals():
 		_endingMoon()
 		return
 
-	if false and global_position.distance_to(mainTarget.global_position)<=nearMissThreshold:
+	if global_position.distance_to(mainTarget.global_position+Vector2.UP*250)<=nearMissThreshold:
 		_endingNearMiss()
 	else:
 		_endingMiss()
